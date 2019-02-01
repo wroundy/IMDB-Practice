@@ -1,0 +1,125 @@
+<!-- all inline comments appear above the code they speak of -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- Link res="stylesheet" href links to "fontawesome.com" and was used for the "search" icon -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <nav>
+      <header>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAADfCAMAAADcKv+WAAABKVBMVEUhISH////55jL55zL56TL5yjL5zzL5zjL5zDL5yTL56jL5zTL55TL56zL5yDL56DL50TL5yzL50DL52TL55DL53jL51zIAACD/4zMcHSH/3zP/2DP/5TMACyAWGCH/1DMUFyEABiALEiAJECCtlyv//vZ3aiZrYCVgUyUjIyEUGCErKSL5xSLJpS1NRiOynSveuy+UfSnbwC+olCrLsi5BOyPCqS3AsC3+/e2biinv2zHu0DGCbyd0ZybTsi4zLyKGeydJQiOZgSnYxi/57AmThClZTiT89rP9+ML968Ctniv5y0qykys5NCLTsC67nSz68F/89Z778n7++939+cv671H784766Wr89KfQuy773IH5yQn61mVuXSb73Yn62G386bH97s384qRPFildAAAQm0lEQVR4nN2d+1/aPBvGW3Hi5GFMnaZHWoqIZ4Epj7yKU4ZM52nq3J4Np9P//494k7Yp0JNNaaBw/TKkbZJv7zv3lRT4jGGJtHf28vh0/m5oOn96fDnbIxszE/zU55fzDaThASLpQzh/fI4cce/lYehw3YKDeXgJGM0giIW/53HCw4LBfClEgvj8FEc+Qxvtp+e+Ec9iGcCOYCjP+kI8exdrPkMb7/wh/RCfz0cAEGnj3XMoxMLDiAAibTx4l1dPxJf2CBFCtV8IEQujkqMdbZx7OIg74tnIASJtuJcdV8TH9rBHG07tx6CIo1RnerXxEAgRTsO3Iyu3CelALLx9M+xx9icHox2xMOwR9q03dkZm3AjfOuJoQzwf8SzVde6H+DDClaYjW13tQXzceDMW2nj0QjxrD3tsUal95o5YGBtCyFhwRTwf9rg8NTtLfMm5G+LfmE7E2WnlXWma9KqNFydiXNNUeXdxDECDmLGTqhbi0/RsHDX9B+R4hr9UiC98sCM+t2kMMAIpm7uAZ0CJOALtZxviOY3hRaJpZfMYyI0U8YXnvYhncQqiPWAQckslztRZbI5M7II4rZSm7ZApZZM8U2ffdCM+t6djoVQSFtBdwFwoSduRZIq8NTOMBuJDJAPsU6mUMnvRAhosoPL6tRKCya7zDuJeDIKYUlLXf4DMM7p4sLvpiCSx2ncW4mMEd6xPpTYhX5bpiAfHV/1GMvXbQoxDEGcbWp7pEQ9WSn1CtjHiWQwQUaI6ILPgT0npp1H94TFCfEqm4qCkknRAroH6235G92AitiMbJYmSiqIk7W/ZIXkNqId9MKLFOIPytL+xhlJSSV20ytNOyO50VQFTvhL7iSKyRoj4e+B5OqUoegHV5IYLZLKRR5BrufzBlSPQhEr+1hEHTAgTdPNAzq3pcfKClHPgz6aiTPXdWxsh7g02T5NXZR6sdWabJpdTLul67XgznKD7M+zfdnKQKrWA2ls1tRyEnLKdpkTUnfIXIv62t05XU2LpTyDIiLp7gojJwSLqkAdAc4Gk0x3LFOjnqTJne2NKmbVD8gCUqTC2C8wdZcQ5WEA3RTtkUpkuyx2TX5Nz9U062dR+ZqhWmylFvDrQcmDrygE5pUw1VH3vxMvgzzVc6tBBVP4yj8oUJc0pYqm8qpcWHkHaO4LxvWDkPGhdTInKHK1RKI/ME62mxVLjEm3h8VxruUPWZinyIT0x53QaVi52O3wmpEsk4VKOTv8dpRhKDc8lG7zcg+gRSfqihagn4XouDpDUEPVyc30JHJBbVwNmZOai0ntFVN7b3lPEzeMeSGgQKxdTkfUZSFEh6gW0MSc6Ia9awHyyxiODSMICOlhFgQjjN60X0HyuMeUCebgCd0+8BnZr085A01ffiJBv6qIF8jxeTrtBws3FeqM08PgZ6hMRzr+uZ9g6JCgnHZDvxaHEzxDzPrwUUdysAzlrK5oGZHwUGhHyHR5oaAXKr8j23R84iBFkSETRWmEzjHqgdG+MMGQqWkh4S5FCXBkG0bbCZoAivjc3Rl0WDxpKiLZdOtOVOryuHax82g3BSIyoiMmLrd4Vdu5aeS8qF501KTSIS1hAyUfT04+u2cPrBkQDAMiamuXBHHlLZIgwXNcrwL68XvuDaERxyViTqmC1XAqVUkYXukpG1DCalTAl8hYJEGHH9g8Bccf4BLgmBdrBoSiS56hBJlbc0ayEqZLfuqCI8OZeWc+w7ZKvRTzO6yphTRCtqDV80KyeLqghwgLK259+dpRdsToOzOdEy/ugYWllaoglvcDwmkuW6pkavAr0oK0HRcMypj0lRNT+bmMl79axCpZe7dkgU3S0lonGB0bD4o+pIQqXPMPviqLwx2U2qgc+BqGTCaiM9INmKS/QQhQbGqM1xPfitezSrUsMRSea1g8aFiAmDIxYAQy/JYjCgerstrsG0EKzEMlXFEFNQ6yvMdrK9bJLEBm1LlpoXXNNW4sQDUum54tiGe4msrLq1i3f4nS0ZQpRswtQRFxyi5+pVYiWo4tmIYZI1MVgEqs5n47po2HlDsWAI7YUGFF3xuELrhWpIe67IuaAX3ApCDoXNcRDN0TtUDh0Xe9Qk7pMOVE10PMphdYQFoWG5jUcGuJbdBM1V9s/XO1+oFiDiLXBIq4KtBAXRaD7n9CzgsuWuJL7FpKaALUoLgqf+GxdWBR3euoLkAddaEGFHuJKlgGH3OLW4DzQHXGHGqKIFuDg0v5oauCSt0kzNThiDbnDsAHDGGNwRN8V3OCkLpOW1MCIi5V4rOD4Fj3ExZggEhtjcERUUuMgQEhIglge6DLGU8TGGBxR/DjYBbeXiI0xOOJ8TEqqvD1PDTEmJTVfI6w3BBWVdknls2qQ04iNkQBRCDSCUMrnAAC7xUAFjdgYSRCprcDztWplXxAESQ2CSGqMJIj1ICMIMMaspkcNZLMA6FUaVASCmwhIy818YAkn/RkjjzbPeZDbLR59hFGbFzhOqNTQ165yVbOHQDcRVIKPGYkEcdvnabEvmh41+bi+ClNykYMZKXQa3b/kmfxHwbqJKgqw75YN7FBDnN8hK6kQDS35+ONiGUWNE6QtHlZ8e6v7MqMdmYhLMlje2V/c375UvduVtx1tRIbo/ijVqTVNhqHIHxdPilk4IAlHDeaheuAYnlDLZ4sCvokVTn9P2PJeELvcpqgQF+f9EXmEBsvHar28VK0sonyEqwV5yRoQzMNsC//VSdYK4HfNPyo7+F2f2wmNkRbiPLfuPUU0FLXy0g5cyOatsM0L+R7EbZlf5/Dr2j5+GzA5x6A5730N36KH6LOd0mrzHGfGDex3rqir3YhwMgMMXwTHJi23xVuXCBw+7r0M4Fc5eohuHxGbiGVzaDDBuoo6jFsX4nwXP0xagE9aVvElQnX1l4Cv9MwYME8kIsSa53bKKhgo66odqH3QjQgnM9ixECyuWh5fIhwAc6IJPuWb0BiJEKued5bfxVl3yWOX0//8lOtC5Hir4kOEHKatyh1jlHFDPvsasEM0GUkQ/brN4TJSzGKX0/88Al0uxnUZY8WKr/ALWMYIY4tP9+6L0BiJEH0quTXHjrRssVMOhGo3Ipx1HWME2ok1f/ElMLa4Ic67eudP6CFyfvPDjMPHvJW0Bkk3IjJG86DEq3UceYAvgQUZN8R5L8nVZaKSSoa469mtVTCqOStp9UuOdUSjQHQbI7elbuGXn3iALwG4IW5Z9eqLb1FELHoao1Uweo0RBg7NOMEoEN3GCBE0jLiStdJTlbuW5F6IjEQNEU40r26tGqMbowGE/hF+oSELS0KH30KwjPFA7aSn3Kk8Xn1Zt4kGoveXb6waw1nGKOj/CChRBXwDbMZovuwYI1eXO5XHG7FCwkiGuOP5nNHFGIUdPYz7CyjDjaNBjPHSqjzeiETGSIbo1605PzhkjMaOqKJ74ILObSJ2jFGwGaMJBmNrvFpYiMoYiRAXfPwY6CyQomOMglX5uFXjKIeM0ULQTszzbMZoNCT5GCPRjpEIcV7y3qi6GKOk4pFwq8ZRztsYjSToNsZWRMZIhujjx93GCHBa4jnDrZuugYwRZ3TLMkbJMsaFLmP0flZFZoyEiN5+3GuMZlqeYIbVpS5jNDN6WeMxLTJGnJ54hnLeDkVmjMwCiTjv7RQsGMY5hjEaZ19KxnvS+olx1OA32jrJA/MSDu0YBeNlEdQ487j3M01AMmgyRB8/hgXDxEHGyBlnYxyJqZtHIeIvqy0L8UgzL1kQKnV8C448M8a6TRQQF355llRYMEycXV7+yJlnmwOXVreMo5JujMaJOwAHHgYsb16yIJj/LkiX3iUV7NBD9NlO5UxEwxjNsw9MRCZvIiJjNCHgdDNbhQGz8lwwb4C07fO8z7pNFBB9/BgaozleDSctNAOTDB9FxrjM2RuFAbMu+ViVOMgpVf2eaFq3iQKi5P2c0SoYyBhNsnVQMV5kzRewxmRbkr1RiAMvEQSOkzInYKVaqVRXfJ/Zutym6BC9nzPigsEhYzQRV4AxxSQV7OgvON0Ye5rkjIDJ+zvbJ8tbWY3Jog9A/L8dwjtuU3SIPmUO1xjdGMy0PJBX9LFImrxtICJjxG3BoEnS/vaWETDjp0a+ZB1EhiKi99c2eo3ROLuWN3ikfP6Esw7uQzJp4bMetVc+hfISiTGSInp/bSNbxK5hGSNMSyNBJVmtS0bUAKOdoIQ0f7QSAk9HJDBG0orqvZ1yN0btBKFlcvwxmmv1LRWeqYVHsxAJjJEUMYAxSsgYJTTXpHm4hdDLSBb9Cr6PqNllTm0qiNLrxighY0zrc62O0SIis5SvBa83xIjezxnBZ7OMwJitGnON2hcD1WWKiN7PGdWjk/pxHn0TgxZYRyTGSIzos8VRo5trryISGCMpIuf3I78BisAYiREJv7ZBSwTGSIz4OSaIvwK7Bimi33ZqkJK/0kOciMc3xAmMkRhR8n68OUgRGCM5ovdzxkGKwBjJEb2fMw5UfIIe4tdRM0ZyRO/njAMVXBFTQwz6fUbKAr+oIfptpwYp+Ss9xIlPsXCN4MbIfCDVRDx+HqYeSQEHTI4o+XycMkBB76eHGI+fh1FF/DcWPw+jmqjx2E7BckMN8cP/YoEIfZEeYiIeiIHHGwIxcxwDY8wfTVBEnIjo52H9iNcWAo83BKLfc8ZBEcJFOFXEYW+neLBOQBgKcYjbKT6ryWD9q/QPwXhDIH4YgjHin3VeFo++fp4kCGFIxA+DQ+xC+/jv5/8lJjMTgStpP4gz9LdTNrQMRJP+IcnOPhET9FwDoQH91+FW1EKj9YM4Ef1eQy8jHbTMTCYxMdEvWz+I0dWbLrSvEG1yZhKiTUSD1g/ih0zfURwEGhZzH+KiTOiN/yDRsJifIdonz1RXtIjmmr/++cnchOknHXSz4UDLJBKDQcP65wfzBfZIrMRrYeRVjHaC0GZmJjMZlJGDV+ILc5cJc2H6yJ3RRMsdG2jpNERLDAUNK/OdKTRDXTlTBPFGw2ruMWy4KydmaiCnZrNqXk/I+KFhTbAMextyQJMfvh4Vi8txRTM18RMifkmEvTozqZcRvUbGVYn/IOJdc2KM1UT/uzSbGPYwaGpS/2/Qb8eYMXGrI55mhj0Qesqc6ojsGE/GZsFA/Dm2mZr4yRqIp5OJMdXkFxORbQ57KLTUZDHij8ywx0JHmVsL8W5Mwwh9HyOy92MZxsw920H8PpZhnDntQmQn4HJ63DSZYLsRT5vDHlD0ap72ILL3YxdGHEQL8fvYhbH53YbI/hz2kCLW5DfWjrjXnBwrNfcciOx/zWGPKkqlb1gnIns/M+xxRaeZe9YNcZxStZOmPYjQHIc9sqiELdGByP5ID3ts0Sh9y3ohst/SM2Og9DfWG5HNjAFjepL1QyzMjDxjOl3wRWT30iPOmE7vsf6Io87oJHQisoVRno/pmYIDyIkI62ozPaq6d8FxQ2R/jChj89aNxhURrnOGPdowan5xhXFHZPfuRw6yee8oNL6ILHszYozNGy8ST0R2b5SqjmcIfRHhjEyPCGQzfeqD4YfIsl9GAbKZdi8zwRAh5EzMIV8DfB2RZb/HeU42v31/FeB1RFh4/otnKJvpG+8iQ4YIdXdz34wVZrN5f3MXbOwBEaEKpz8gZgw44SDuf5w6l9v9I+q6O725/TZMvm+3N6cBo4f1f7XZHheIyaWRAAAAAElFTkSuQmCC" alt="">
+      </header>
+        <div class= "search">
+          <!-- input type = "text" to show search bar and possible search options -->
+          <input type="text" placeholder="Find Movies, TV shows, Celebrities and more...">
+          <!-- button tag used to signify a button for searching -->
+          <button type = "submit" class = "searchButton">
+
+            <i class = "search"></i>
+            <select>
+                <option value="all">all</option>
+                <option value="titles">titles</option>
+                <option value="TV episodes">TV episodes</option>
+                <option value="Names">Names</option>
+                <option value="Companies">Companies</option>
+                <option value="Keywords">Keywords</option>
+                <option value="Advanced search>>">Advanced Search>></option>
+              </select>
+              <!-- butoon i class =fas fa-search links to the url above and fetches the search icon for the "search" bar -->
+              <button><i class="fas fa-search"></i></button>
+          </button>
+        </div>
+      
+      <div class="dropdown">
+          <button class="dropbtn">IMDb PRO</button>
+          <div class="dropdown-content">
+            <h1> The Essential Recource for Entertainment Professionals </h1>
+            <h2> Find industry contacts and talent representation </h2> 
+            <h3> Access in development titles not available on IMDb</h3>
+            <h4> Get the latest news from leading industry trades</h4>
+            <h5> Claim your page and control your brand across IMDb and Amazon </h5>
+            <div class="tooltip"> <a href="https://pro.imdb.com/login/ap?u=/login/lwa&imdbPageAction=signUp&rf=cons_nb_hm&ref_=cons_nb_hm" target="_blank">Try IMDb PRO?</a> </div>
+          </div>
+        </div>
+
+        <div class="tooltip"> <a href="https://help.imdb.com/imdb?ref_=cons_nb_hlp" target= "_blank" >Help</a> </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">MOVIES, TV & SHOWTIMES </button>
+            <div class="dropdown-content">
+              <option value ="WATCH NOW">WATCH NOW</option>
+                <ul>
+                  <li><a href="https://www.imdb.com/freedive/?ref_=nv_wa_fdv" target="_blank" >IMDb Freedive</a></li>
+                </ul>
+              <option value ="MOVIES">MOVIES</option>  
+                <ul>
+                  <li> <a href="https://www.imdb.com/movies-in-theaters/?ref_=nv_mv_inth" target= "_blank" >In Theaters</a></li> 
+                  <li>  <a href="https://www.imdb.com/showtimes/?ref_=nv_mv_sh" target="_blank">Showtimes and Tickets</a></li>
+                  <li> <a href="https://www.imdb.com/trailers/?ref_=nv_mv_tr" target="_blank">Latest Trailers</a></li>
+                  <li>  <a href="https://www.imdb.com/movies-coming-soon/?ref_=nv_mv_cs" target="_blank" >Coming Soon</a></li>
+                  <li> <a href="https://www.imdb.com/calendar/?ref_=nv_mv_cal" target="_blank">Realease Calender</a> </li>
+                  <li> <a href="https://www.imdb.com/chart/top?ref_=nv_mv_250" target=""_blank>Top Rated Movies</a> </li>
+                  <li> <a href="https://www.imdb.com/india/top-rated-indian-movies?ref_=nv_mv_250_in" target="_blank">Top Rated Indie Movies</a> </li>
+                  <li> <a href="https://www.imdb.com/chart/moviemeter?ref_=nv_mv_mpm" target="_blank"> Most Popular Movies</a></li>
+                  <li> <a href="https://www.imdb.com/chart/?ref_=nv_ch_cht" target="_blank"> Box Office</a></li>
+                  <li> <a href="https://www.imdb.com/genre/?ref_=nv_ch_gr" target="_blank">Most Popular by Genre</a> </li>
+                </ul>
+              <option value="TV & VIDEO">TV & VIDEO</option>  
+                <ul>
+                  <li> <a href="https://www.imdb.com/tv/?ref_=nv_tvv_tv" target="_blank">IMBD TV</a> </li>
+                  <li> <a href="https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250" tabindex="_blank">Top Rated TV Shows</a> </li>
+                  <li> <a href="https://www.imdb.com/chart/tvmeter?ref_=nv_tvv_mptv" target="_blank"> Most Popular TV shows</a></li>
+                  <li> <a href="https://www.imdb.com/sections/dvd/?ref_=nv_tvv_dvd" target="_blank">DVD & Blu-Ray</a> </li>
+                </ul>
+              <option value ="Special Features">Special Features</option>
+                <ul>
+                  <li> <a href="https://www.imdb.com/amazon-originals/?ref_=nv_sf_ams" target="_blank">Amazon Originals</a> </li>
+                  <li> <a href="https://www.imdb.com/streaming/?ref_=nv_sf_str" target="_blank">Straming Now</a> </li>  
+                  <li> <a href="https://www.imdb.com/scary-good/?ref_=nv_sf_sca" target="_blank">Horror Guide</a> </li>
+                  <li> <a href="https://www.imdb.com/imdbpicks/?ref_=nv_sf_picks" target="_blank">IMDb Picks</a> </li>
+                  <li> <a href="https://www.imdb.com/best-of/?ref_=nv_sf_bes" target="_blank">Best of 2018</a> </li>
+                  <li> <a href="https://www.imdb.com/video-games/?ref_=nv_sf_vidg" target="_blank">Video Games</a> </li>
+                  <li> <a href="https://www.imdb.com/marvel/?ref_=nv_sf_marvel" target="_blank">Marvel</a> </li>
+                </ul>
+
+        <div class="dropdown"></div>
+          <button class = "dropbtn">CELEBS, EVENTS & PHOTOS</button>
+          <div class="dropdown-content">    
+            <option value= "CELEBS">CELEBS</option>
+              <ul>
+                <li> <a href="https://www.imdb.com/search/name?birth_monthday=01-31&refine=birth_monthday&ref_=nv_cel_brn" target="_blank">Born Today</a> </li>
+                <li> <a href="https://www.imdb.com/news/celebrity?ref_=nv_cel_nw" target="_blank">Celebrity News</a> </li>
+                <li> <a href="https://www.imdb.com/search/name?gender=male,female&ref_=nv_cel_m" target="_blank">Most Popular Celebs</a> </li>
+              </ul>
+            <option value ="PHOTOS">PHOTOS</option>   
+              <ul>
+                <li> <a href="https://www.imdb.com/gallery/rg1859820288?ref_=nv_ph_ls" target="_blank">Latest Stills</a> </li>
+                <li> <a href="https://www.imdb.com/gallery/rg1624939264?ref_=nv_ph_lp" target="_blank">Latest Posters</a> </li>
+                <li> <a href="https://www.imdb.com/gallery/rg1641716480?ref_=nv_ph_lv" target="_blank">Photos We Love</a> </li>
+              </ul>  
+            <option value ="EVENTS">EVENTS</option>  
+              <ul>
+                <li> <a href="https://www.imdb.com/awards-central/?ref_=nv_ev_awrd" target="_blank">Awards Central</a> </li>
+                <li> <a href="https://www.imdb.com/festival-central/?ref_=nv_ev_fc" target="_blank">Festival Central</a> </li>
+                <li> <a href="https://www.imdb.com/oscars/?ref_=nv_ev_acd" target="_blank">Oscars</a> </li>
+                <li> <a href="https://www.imdb.com/golden-globes/?ref_=nv_ev_gg" target="_blank">Golden Globes</a> </li>
+                <li> <a href="https://www.imdb.com/sundance/?ref_=nv_ev_sun" target="_blank">Sundance</a> </li>
+                <li> <a href="https://www.imdb.com/cannes/?ref_=nv_ev_can" target="_blank">Cannes</a> </li>
+                <li> <a href="https://www.imdb.com/comic-con/?ref_=nv_ev_comic" target="_blank">San Diego Comic-Con</a> </li>
+                <li> <a href="https://www.imdb.com/emmys/?ref_=nv_ev_rte" tabindex="_blank">Emmy Awards</a> </li>
+                <li> <a href="https://www.imdb.com/venice/?ref_=nv_ev_venice" target="_blank">Venice Film Festival</a> </li>
+                <li> <a href="https://www.imdb.com/toronto/?ref_=nv_ev_tor" target="_blank">Toronto Film Festival</a> </li> 
+                <li> <a href="https://www.imdb.com/festival-central/tribeca?ref_=nv_ev_trb" target="_blank">Tribeca</a> </li>
+                <li> <a href="https://www.imdb.com/lafilmfest/?ref_=nv_ev_laff" target="_blank">LA Film Festival</a> </li>
+                <li> <a href="https://www.imdb.com/event/all/?ref_=nv_ev_all" target="_blank">All Events</a> </li>
+              </ul>
+            </div>
+          </div>
+
+    </nav>
+  </body> 
+</html>
